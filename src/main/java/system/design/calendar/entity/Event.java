@@ -1,9 +1,10 @@
-package rest_guidlines.services.callendar.controller.entity;
+package system.design.calendar.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
 @NoArgsConstructor
 @Data
@@ -12,5 +13,6 @@ public class Event {
     Date startDate;
     Date endDate;
     String location;
-    Boolean isRecurring;
+    User creator;
+    List<User> recipients;
 }

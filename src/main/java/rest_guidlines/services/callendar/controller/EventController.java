@@ -16,5 +16,4 @@ public class EventController {
         event.setLocation("zoom://please/join/my/zoom");
         return event;
     }
-
 }

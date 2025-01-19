@@ -15,4 +15,11 @@ public class Event {
     String location;
     User creator;
     List<User> recipients;
+
+
+    //There is one to many mapping relation between event and recurring relation
+    //what is your requirement here
+    //I want to get all the events of a user
+    //to get all the recurring event of a user, you need to fetch it from the recurring event
+    //you should allso get the
 }

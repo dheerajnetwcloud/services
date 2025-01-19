@@ -1,4 +1,4 @@
-package system.design.controller;
+package system.design.app.controller;
 
 
 import com.google.common.base.Stopwatch;

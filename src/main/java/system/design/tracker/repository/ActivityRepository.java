@@ -25,7 +25,7 @@ public class ActivityRepository {
                 activity.getCategory(),
                 activity.getDescription(),
                 activity.getComments(),
-                LocalDateTime.now() // Automatically set current timestamp
+                activity.getCreatedAt() // Automatically set current timestamp
         );
     }
 

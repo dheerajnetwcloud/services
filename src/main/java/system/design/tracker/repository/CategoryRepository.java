@@ -34,7 +34,7 @@ public class CategoryRepository {
         @Override
         public Category mapRow(ResultSet rs, int rowNum) throws SQLException {
             Category category = new Category();
-            category.setId(rs.getInt("id"));
+            category.setSeq(rs.getInt("id"));
             category.setName(rs.getString("name"));
             category.setCreateDate(rs.getTimestamp("created_at"));
             return category;

@@ -23,7 +23,8 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
             cd /home/ec2-user/app/services  # or wherever your app lives
             git pull origin master
-            chmod 755 restart.sh
-            ls -ltr
-            ./restart.sh           # script to restart app, e.g., restart Java app or server
+            docker stop my-web-app || true
+            docker rm my-web-app || true
+            docker build -t my-web-app .
+            docker run -d -p 80:8080 --name my-web-app my-web-app
           EOF

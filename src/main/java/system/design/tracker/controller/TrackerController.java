@@ -21,6 +21,7 @@ public class TrackerController {
 
     @GetMapping("/all")
     public List<Category> getCategories() {
+        System.out.println("Getting all the Categories");
         return categoryService.fetchAllCategories();
     }
 

@@ -26,5 +26,5 @@ jobs:
             docker stop my-web-app || true
             docker rm my-web-app || true
             docker build --build-arg CACHE_BUSTER=$(date +%s) -t my-web-app .
-            docker run -d -p 80:8080 --name my-web-app my-web-app
+            docker run -d -p 8082:8080 --name my-web-app my-web-app
           EOF

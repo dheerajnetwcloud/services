@@ -23,7 +23,7 @@ public class ActivityService {
     }
 
     // ✅ Retrieve all activities
-    public List<Activity> getActivities() {
+    public List<Activity>  getActivities() {
         return ActivityRepositoryMongo.findAll();
     }
 }

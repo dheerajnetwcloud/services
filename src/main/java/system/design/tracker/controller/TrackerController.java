@@ -30,6 +30,7 @@ public class TrackerController {
         try {
             // Set the creation date
             category.setCreateDate(new Date());
+            category.setSeq(10);
             categoryService.addCategory(category);
             return new ResponseEntity<>("Category created successfully!", HttpStatus.CREATED);
         } catch (Exception e) {

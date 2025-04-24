@@ -40,7 +40,7 @@ public class ActivityRepository {
         @Override
         public Activity mapRow(ResultSet rs, int rowNum) throws SQLException {
             Activity activity = new Activity();
-            activity.setId(rs.getInt("id"));
+            //activity.setId(rs.getInt("id"));
             activity.setCategory(rs.getString("category"));
             activity.setDescription(rs.getString("description"));
             activity.setComments(rs.getString("comments"));

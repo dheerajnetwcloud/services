@@ -19,7 +19,7 @@ public class CategoryService {
     private CategoryRepositoryMongo categoryRepositoryMongo;
 
     public void addCategory(Category category) {
-        categoryDAO.insertCategory(category);
+        categoryRepositoryMongo.insert(category);
     }
 
     public List<Category> fetchAllCategories() {

@@ -6,6 +6,7 @@ WORKDIR /app
 
 # Clone the Git repository (you can also use COPY if code is in context)
 # Note: For private repos, you'll need to handle SSH keys or tokens
+ARG CACHE_BUSTER=1
 RUN apk add --no-cache git && \
     git clone https://github.com/dheerajnetwcloud/services.git . && \
     git checkout master

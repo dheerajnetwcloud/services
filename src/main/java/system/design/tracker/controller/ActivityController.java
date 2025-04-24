@@ -26,6 +26,7 @@ public class ActivityController {
     // ✅ POST: Create a new activity
     @PostMapping
     public ResponseEntity<String> createActivity(@RequestBody Activity activity) {
+        activity.setSeq(1);
         activityService.createActivity(activity);
         return ResponseEntity.ok("Activity created successfully");
     }

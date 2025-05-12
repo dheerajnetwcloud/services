@@ -14,8 +14,8 @@ import java.util.Date;
 public class TODO {
     @Id
     private String id;
-    private String text;
-    private Boolean status;
+    private String task;
+    private Boolean done;
     private String category;
     private Date date;
 

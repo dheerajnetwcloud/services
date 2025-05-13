@@ -29,4 +29,9 @@ public class TODOController {
     public List<TODO> getTODOs() {
         return todoService.getTODOs();
     }
+
+    @PutMapping("/{id}")
+    public TODO updateTODOStatus(@PathVariable String id, @RequestBody TODO todo) {
+        return todoService.updateTODOStatus(id, todo);
+    }
 }

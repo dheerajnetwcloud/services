@@ -3,6 +3,7 @@ package system.design.tracker.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import system.design.tracker.entity.LeetCodeTracker;
@@ -23,6 +24,7 @@ public class LeetCodeTrackerController {
 
     @GetMapping("/all")
     public List<LeetCodeTracker> getAllLeetCodeTrackers() {
+
         return leetCodeTrackerService.getAllLeetCodeTrackers();
     }
 

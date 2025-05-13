@@ -22,4 +22,10 @@ public class TODOService {
     public List<TODO> getTODOs() {
         return todoRepository.findAll();
     }
+
+    public TODO updateTODOStatus(String id, TODO todoStatus) {
+        TODO todo = todoRepository.findById(id).orElseThrow();
+        todo.setDone(todoStatus.getDone());
+        return todoRepository.save(todo);
+    }
 }

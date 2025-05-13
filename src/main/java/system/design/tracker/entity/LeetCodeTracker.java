@@ -17,6 +17,7 @@ import java.util.Date;
 public class LeetCodeTracker {
     @Id
     private String id;
+    private String name;
     private String problem;
     private String description;
     private String status;

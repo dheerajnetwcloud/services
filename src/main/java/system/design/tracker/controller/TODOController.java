@@ -34,4 +34,8 @@ public class TODOController {
     public TODO updateTODOStatus(@PathVariable String id, @RequestBody TODO todo) {
         return todoService.updateTODOStatus(id, todo);
     }
+    @DeleteMapping("/{id}")
+    public void deleteTODO(@PathVariable String id) {
+        todoService.deleteTODO(id);
+    }
 }

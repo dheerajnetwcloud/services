@@ -28,4 +28,9 @@ public class TODOService {
         todo.setDone(todoStatus.getDone());
         return todoRepository.save(todo);
     }
+
+    public void deleteTODO(String id) {
+        TODO todo = todoRepository.findById(id).orElseThrow();
+        todoRepository.delete(todo);
+    }
 }
